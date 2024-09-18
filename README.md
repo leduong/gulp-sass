@@ -1,8 +1,8 @@
-# gulp-sass ![npm package version](https://img.shields.io/npm/v/gulp-sass?label=npm%20version) [![Build Status](https://img.shields.io/github/workflow/status/dlmanning/gulp-sass/CI/master)](https://github.com/dlmanning/gulp-sass/actions?query=workflow%3ACI+branch%3Amaster) [![Join the chat at https://gitter.im/dlmanning/gulp-sass](https://img.shields.io/gitter/room/dlmanning/gulp-sass?color=%2346b091&label=chat&logo=gitter)](https://gitter.im/dlmanning/gulp-sass) ![Node.js support](https://img.shields.io/node/v/gulp-sass)
+# gulp-sass ![npm package version](https://img.shields.io/npm/v/gulp-sass?label=npm%20version) [![Build Status](https://img.shields.io/github/workflow/status/leduong/gulp-sass/CI/master)](https://github.com/leduong/gulp-sass/actions?query=workflow%3ACI+branch%3Amaster) [![Join the chat at https://gitter.im/leduong/gulp-sass](https://img.shields.io/gitter/room/leduong/gulp-sass?color=%2346b091&label=chat&logo=gitter)](https://gitter.im/leduong/gulp-sass) ![Node.js support](https://img.shields.io/node/v/gulp-sass)
 
 Sass plugin for [Gulp](https://github.com/gulpjs/gulp).
 
-**_Before filing an issue, please make sure you have [updated to the latest version of `gulp-sass`](https://github.com/dlmanning/gulp-sass/wiki/Update-to-the-latest-Gulp-Sass) and have gone through our [Common Issues and Their Fixes](https://github.com/dlmanning/gulp-sass/wiki/Common-Issues-and-Their-Fixes) section._**
+**_Before filing an issue, please make sure you have [updated to the latest version of `gulp-sass`](https://github.com/leduong/gulp-sass/wiki/Update-to-the-latest-Gulp-Sass) and have gone through our [Common Issues and Their Fixes](https://github.com/leduong/gulp-sass/wiki/Common-Issues-and-Their-Fixes) section._**
 
 **Migrating your existing project to version 5? Please read our (short!) [migration guide](#migrating-to-version-5).**
 
@@ -38,7 +38,7 @@ const sass = gulpSass(dartSass);
 
 ## Usage
 
-**Note:** These examples are written for CommonJS modules and assume you're using Gulp 4. For examples that work with Gulp 3, [check the docs for an earlier version of `gulp-sass`](https://github.com/dlmanning/gulp-sass/tree/v4.1.1).
+**Note:** These examples are written for CommonJS modules and assume you're using Gulp 4. For examples that work with Gulp 3, [check the docs for an earlier version of `gulp-sass`](https://github.com/leduong/gulp-sass/tree/v4.1.1).
 
 `gulp-sass` must be used in a Gulp task. Your task can call `sass()` (to asynchronously render your CSS), or `sass.sync()` (to synchronously render your CSS). Then, export your task with the `export` keyword. We'll show some examples of how to do that.
 
