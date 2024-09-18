@@ -1,5 +1,5 @@
 {
-  "name": "gulp-sass",
+  "name": "@leduong/gulp-sass",
   "version": "9.0.0",
   "description": "Gulp plugin for sass",
   "main": "index.js",

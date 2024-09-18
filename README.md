@@ -17,7 +17,7 @@ To use `gulp-sass`, you must install both `gulp-sass` itself *and* a Sass compil
 Whichever compiler you choose, it's best to install these as dev dependencies:
 
 ```sh
-npm install sass gulp-sass --save-dev
+npm install sass @leduong/gulp-sass --save-dev
 ```
 
 ### Importing it into your project
@@ -25,7 +25,7 @@ npm install sass gulp-sass --save-dev
 `gulp-sass` must be imported into your gulpfile, where you provide it the compiler of your choice. To use `gulp-sass` in a CommonJS module (which is most Node.js environments), do something like this:
 
 ```js
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('@leduong/gulp-sass')(require('sass'));
 ```
 
 To use `gulp-sass` in an ECMAScript module (which is supported in newer Node.js 14 and later), do something like this:
@@ -52,7 +52,7 @@ To render your CSS with a build task, then watch your files for changes, you mig
 'use strict';
 
 const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('@leduong/gulp-sass')(require('sass'));
 
 function buildStyles() {
   return gulp.src('./sass/**/*.scss')
@@ -112,7 +112,7 @@ exports.buildStyles = buildStyles;
 `gulp-sass` can be used in tandem with [`gulp-sourcemaps`](https://github.com/gulp-sourcemaps/gulp-sourcemaps) to generate source maps for the Sass-to-CSS compilation. You will need to initialize `gulp-sourcemaps` _before_ running `gulp-sass`, and write the source maps after.
 
 ```js
-const sourcemaps = require('gulp-sourcemaps');
+const sourcemaps = require('@leduong/gulp-sourcemaps');
 
 function buildStyles() {
   return gulp.src('./sass/**/*.scss')
@@ -128,7 +128,7 @@ exports.buildStyles = buildStyles;
 By default, `gulp-sourcemaps` writes the source maps inline, in the compiled CSS files. To write them to a separate file, specify a path relative to the `gulp.dest()` destination in the `sourcemaps.write()` function.
 
 ```js
-const sourcemaps = require('gulp-sourcemaps');
+const sourcemaps = require('@leduong/gulp-sourcemaps');
 
 function buildStyles() {
   return gulp.src('./sass/**/*.scss')
@@ -150,7 +150,7 @@ exports.buildStyles = buildStyles;
 As of version 5, `gulp-sass` _does not include a default Sass compiler_, so you must install one (either `node-sass` or `sass`) along with `gulp-sass`.
 
 ```sh
-npm install sass gulp-sass --save-dev
+npm install sass @leduong/gulp-sass --save-dev
 ```
 
 Then, you must explicitly set that compiler in your gulpfille. Instead of setting a `compiler` prop on the `gulp-sass` instance, you pass the compiler into a function call when instantiating `gulp-sass`.
@@ -158,10 +158,10 @@ Then, you must explicitly set that compiler in your gulpfille. Instead of settin
 These changes look something like this:
 
 ```diff
-- const sass = require('gulp-sass'));
+- const sass = require('@leduong/gulp-sass'));
 - const compiler = require('sass');
 - sass.compiler = compiler;
-+ const sass = require('gulp-sass')(require('sass'));
++ const sass = require('@leduong/gulp-sass')(require('sass'));
 ```
 
 If you're migrating an ECMAScript module, that'll look something like this:
@@ -172,7 +172,7 @@ import dartSass from 'sass';
 - sass.compiler = dartSass;
 
 import dartSass from 'sass';
-+ import gulpSass from 'gulp-sass';
++ import gulpSass from '@leduong/gulp-sass';
 + const sass = gulpSass(dartSass);
 ```
 
